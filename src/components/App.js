@@ -53,6 +53,8 @@ function App() {
 
     //console.log("check");
   }
+  const [editableText, setEditableText] = React.useState("");
+
   function handleEdit(id) {
     //setDisplay((prevDisplay, index) => {
     //   return (prevDisplay = index === id);
@@ -62,11 +64,12 @@ function App() {
     arr[id] = true;
     setDisplay(arr);
     //console.log(display);
+    setEditableText(items[id]);
   }
-  let editableText;
 
   function onEditText(event) {
-    editableText = event.target.value;
+    // editableText = event.target.value;
+    setEditableText(event.target.value);
   }
 
   function onEditSave(id) {
@@ -100,6 +103,7 @@ function App() {
               onShow={display[index]}
               onEditText={onEditText}
               onEditSave={onEditSave}
+              checkSaveButton={editableText}
             />
           ))}
         </ul>
