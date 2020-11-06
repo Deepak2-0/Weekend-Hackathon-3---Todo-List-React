@@ -12,8 +12,8 @@ export default function ToDoItem(props) {
     checkSaveButton
   } = props;
   return (
-    <div className="list">
-      <li>{item}</li>
+    <>
+      <li className="list">{item}</li>
       <div>
         <button onClick={() => onEdit(id)} className="edit">
           {" "}
@@ -40,6 +40,6 @@ export default function ToDoItem(props) {
           </button>
         </div>
       )}
-    </div>
+    </>
   );
 }

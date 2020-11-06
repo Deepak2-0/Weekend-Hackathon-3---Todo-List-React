@@ -84,12 +84,12 @@ function App() {
   }
   return (
     <div id="main">
-      <div id="task">
-        <input type="text" onChange={handleChange} value={inputText} />
-        <button id="btn" onClick={addItem}>
-          Add
-        </button>
-      </div>
+      {/* <div id="task"> */}
+      <input id="task" type="text" onChange={handleChange} value={inputText} />
+      <button id="btn" onClick={addItem}>
+        Add
+      </button>
+      {/* </div> */}
 
       <div>
         <ul>
