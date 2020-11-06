@@ -64,7 +64,7 @@ function App() {
     arr[id] = true;
     setDisplay(arr);
     //console.log(display);
-    setEditableText(items[id]);
+    //setEditableText(items[id]);
   }
 
   function onEditText(event) {

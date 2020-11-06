@@ -28,13 +28,15 @@ export default function ToDoItem(props) {
           <input
             type="text"
             className="editTask"
-            defaultValue={item}
+            //{/*defaultValue={item} */}
+            value={checkSaveButton}
             onChange={onEditText}
           />
           <button
             className="saveTask"
             onClick={() => onEditSave(id)}
-            disabled={!checkSaveButton}
+            // disabled={!checkSaveButton}
+            disabled={checkSaveButton === ""}
           >
             Save
           </button>
